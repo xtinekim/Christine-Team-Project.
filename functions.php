@@ -143,3 +143,11 @@ require get_template_directory() . '/inc/jetpack.php';
 * Load Options compatibility file.
 */
 require get_stylesheet_directory() . '/inc/options.php';
+
+/**
+* Enqueeing Google Fonts
+*/
+function add_google_fonts(){
+	wp_enqueue_style('wpb-google-fonts','https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+}
+add_action('wp_enqueue_scripts','add_google_fonts');
