@@ -86,15 +86,27 @@ add_action( 'after_setup_theme', 'portfolio_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function portfolio_widgets_init() {
+	/*Sidebar 1*/
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'portfolio' ),
+		'name'          => __( 'Sidebar', 'portfolio' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'portfolio' ),
+		'description'   => __( 'Add widgets here.', 'portfolio' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	/*Footer*/
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'portfolio' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Add widgets here.', 'portfolio' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );	
 }
 add_action( 'widgets_init', 'portfolio_widgets_init' );
 
@@ -104,7 +116,7 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
 function portfolio_scripts() {
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'portfolio-navigation', get_template_directory_uri() . '/js/slider.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -145,7 +157,7 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_stylesheet_directory() . '/inc/options.php';
 
 /**
-* Enqueeing Google Fonts
+* Enqueueing Google Fonts
 */
 function add_google_fonts(){
 	wp_enqueue_style('wpb-google-fonts','https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
