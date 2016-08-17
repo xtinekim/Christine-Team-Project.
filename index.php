@@ -14,55 +14,44 @@
 
 get_header(); ?>
 
-    <figure class="snip1543">
-  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wifehusband.jpg" alt="Banner" />
-  <figcaption>
-    <h3>Inverness McKenzie</h3>
-    <p>The only skills I have the patience to learn are those that have no real application in life.</p>
-  </figcaption>
-  <a href="#"></a>
-</figure>
+<!--Slider Image- Reference Code Pen-->
+   <div class="workplis">
 
 <figure class="snip1543 hover">
-<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ring.jpg" alt="Banner" />
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/huswife.jpg" alt="Banner" />
   <figcaption>
-    <h3>Alan Fresco</h3>
-    <p>The real fun of living wisely is that you get to be smug about it.</p>
+    <h3>352 HAPPY CLIENTS</h3>
+    <p>We provide the best available service to all our clients through connection, discussing, planning, creating, and celebrating!</p>
   </figcaption>
   <a href="#"></a>
 </figure>
-
-<figure class="snip1543">
-<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bouquet.jpg" alt="Banner" />
-  <figcaption>
-    <h3>Indigo Violet</h3>
-    <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-
-<figure class="snip1543">
-<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/love.jpg" alt="Banner" />
-  <figcaption>
-    <h3>Indigo Violet</h3>
-    <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 
 <figure class="snip1543">
 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/happily.jpg" alt="Banner" />
   <figcaption>
-    <h3>Indigo Violet</h3>
-    <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
+    <h3>50% SAVINGS ON AVERAGE FROM COMPETITORS</h3>
+    <p>We strive to offer our clients an eloquent quality, seamless service, and peace of mind while celebrating their special day!</p>
   </figcaption>
   <a href="#"></a>
 </figure>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 
         <script src="js/slider.js"></script>
+       </div> 
+
+<!--3D CSS Carousel- Reference Code Pen-->
+<div id="wrapper">
+    <div id="image">
+      <div class="image i1"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/cinematography.png"></div>
+      <div class="image i2"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/photography.png"></div>
+      <div class="image i3"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/event.png"></div>
+      <div class="image i4"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/dj.png"></div>
+      <div class="image i5"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/car.png"></div>
+      <div class="image i6"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/travel.png"></div>
+      <div class="image i7"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/florist.png"></div>
+      <div class="image i8"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/more.png"></div>
+    </div>
+  </div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -73,10 +62,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
+
 					get_template_part( 'content', get_post_format() );
 				?>
 
