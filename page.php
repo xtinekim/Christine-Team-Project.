@@ -2,17 +2,28 @@
 /**
  * The template for displaying all pages.
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Portfolio
+ * @package ckim-assignment1/Portfolio
  */
 
+$options=get_option( 'ck_options_settings' ); 
+
 get_header(); ?>
+
+<!--Style for my Options Page-->
+     <style>
+        .site-main{
+	       background-color: <?php echo $options['ck_radio_field']; ?>
+        }
+    </style>
+
+    <style>
+        .site-main{
+	       color: <?php echo $options['ck_select_field']; ?>
+        }
+    </style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -22,7 +33,6 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
