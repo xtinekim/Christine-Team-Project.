@@ -1,26 +1,61 @@
 <?php
 /**
- * The header for our theme.
+ * My Header
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Portfolio
+ * @package ckim-assignment1/Portfolio
  */
+
+$options=get_option( 'ck_options_settings' ); 
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css" />
+
+<!--Provided by WooThemes-->
+<link rel="text/javascript" src="/~ccit3667/wp-content/themes/ckim-assignment1/portfolio/js/jquery.flexslider-min.js">
+</script>
+<link rel="text/javascript" src="/~ccit3667/wp-content/themes/ckim-assignment1/portfolio/js/jquery.flexslider.js">
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<!-- This is the style for my options  -->
+     <style>
+        .site-branding{
+	       background-color: <?php echo $options['ck_radio_field']; ?>
+        }
+    </style>
+
+    <style>
+        .site-branding{
+	       color: <?php echo $options['ck_select_field']; ?>
+        }
+    </style>
+    <style>
+        .site-description{
+	       font-size: <?php echo $options['ck_font_field']; ?>
+        }
+    </style>
+
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'portfolio' ); ?></a>
 
@@ -37,7 +72,7 @@
 			<?php
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $description; ?></p>
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
