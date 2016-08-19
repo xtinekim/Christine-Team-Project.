@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Image Hovers
 # Carousel
 	## Controls
+# Responsive Design 
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -356,10 +357,13 @@ html {
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
+	max-width: 100%;
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background-color: #ffe6ff; /* Fallback for when there is no custom background color defined. */
+	margin: 0;
+	padding: 0;
 }
 
 blockquote:before,
@@ -548,7 +552,7 @@ a:active {
 	background-color: #b30056;
 	display: inline;
 	list-style: none;
-	margin: 0;
+	margin: auto;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: center;
@@ -625,7 +629,7 @@ a:active {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -927,10 +931,18 @@ object {
 	margin-bottom: 30px;
 }
 
+#gridlayout {
+	float: left;
+}
 #page{
 	background-color: #fefdfb;
+	width: 900px;
+	margin: auto;
 }
 
+.site-main{
+	width: 800px;
+}
 /*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
@@ -982,9 +994,10 @@ object {
 # Image Hovers
 - Reference Code Pen
 --------------------------------------------------------------*/
-.workplis{
-	padding-left: 370px;
-    padding-top: 100px;
+.workplis {
+	float: center;
+	width: 100%;
+	margin: 5% 5% 0 20%; 
 }
 
 .snip1543 {
@@ -1145,15 +1158,24 @@ object {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
+
 /*--------------------------------------------------------------
 # 3D Carousel
 - Reference Code Pen
 --------------------------------------------------------------*/
+
+#carouselstyle{
+	max-width: 100%;
+}
+
+
+
+
 #wrapper {
   perspective: 2500;
 	-webkit-perspective: 2500;
-	width: 800px;
-	margin: 200px auto 0 auto;
+	max-width: 60%;
+	margin: auto auto auto auto;
   perspective-origin: 50% 150px;
 	-webkit-perspective-origin: 50% 150px;
   transition: perspective, 1s;
@@ -1184,6 +1206,7 @@ object {
 	}
 }
 #image {
+	max-width: 60%;
 	padding: -10px;
 	margin: 0 auto;
 	height: 300px;
@@ -1196,6 +1219,7 @@ object {
 	-webkit-animation: spin 24s infinite linear;
 }
 .image {
+	max-width: 60%;
 	position: absolute;
 	height: 300px;
 	width: 400px;
@@ -1260,5 +1284,134 @@ object {
   -ms-transform: rotateY(315deg) translateZ(485px);
   -webkit-transform: rotateY(315deg) translateZ(485px);
 }
+
 img {
   border-radius: 25px;
+ }
+
+/*--------------------------------------------------------------
+## Responsive Design 
+--------------------------------------------------------------*/
+/* ----------- iPhone and other mobiles ----------- */
+
+/* Portrait and Landscape */ 
+@media screen and (max-width: 1000px) { 
+	
+	.body 
+	{
+		width: 90%;
+		font-size: 95%;
+	}
+
+	#page 
+	{
+		width: 100%; 
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: 10px; 
+	}
+
+	.site-branding 
+	{
+		height: 100%;
+		text-align: center;
+	}
+
+	img
+	{
+		max-width: 100%;
+	}
+
+	#primary
+	{
+		text-align: center;
+		max-width: 90%;
+	}
+
+	#secondary
+	{
+		display: none; 
+	}
+
+	.main-navigation 
+	{
+		width: 100%;
+		height: 160px;
+		padding-left: 0;
+		display: inline; 
+	}
+
+	#primary-menu
+	{
+		width: 100%;
+	}
+	.workplis 
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+}
+@media screen and (max-width: 450px) { 
+	#wrapper
+	{
+		max-width: 60%;
+		margin: 0;
+		padding: 0;
+
+	}
+
+	#image
+	{
+		max-width: 60%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.imagei1
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei2
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei3
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei4
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei5
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei6
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei7
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+
+	.imagei8
+	{
+		max-width: 60%;
+		margin: auto;
+	}
+}
