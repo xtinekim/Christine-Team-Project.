@@ -7,7 +7,7 @@ Author: Christine Kim
 Author URI: http://phoenix.sheridanc.on.ca/~ccit3667/
 */
 /*
-* This code was taken from "http://www.wpbeginner.com/wp-tutorials/how-to-create-custom-post-types-in-wordpress/""
+* Reference: "http://www.wpbeginner.com/wp-tutorials/how-to-create-custom-post-types-in-wordpress/""
 */
 // Custom Post Type
 
