@@ -1,10 +1,11 @@
 <?php
 /**
- * My Header
+ * My template for the header.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-
+ * Reference: WooThemes
  *
  * @package ckim-assignment1/Portfolio
  */
@@ -37,6 +38,7 @@ $options=get_option( 'ck_options_settings' );
 </head>
 
 <body <?php body_class(); ?>>
+
 <!-- This is the style for my options  -->
      <style>
         .site-branding{
@@ -68,6 +70,7 @@ $options=get_option( 'ck_options_settings' );
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;?>
+		<!--The image in the header section-->
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.png" alt="Banner" width="2000"/>
 			<?php
 			$description = get_bloginfo( 'description', 'display' );
