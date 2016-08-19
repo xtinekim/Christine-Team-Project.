@@ -34,9 +34,7 @@ $options=get_option( 'ck_options_settings' );
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portfolio' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'portfolio' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'portfolio' ), 'portfolio', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'Christine Kim' ) ); ?>"><?php printf( esc_html__( 'Christine Kim', 'Christine Kim' ), 'Kim' ); ?></a>
 		</div><!-- .site-info -->
  
 
