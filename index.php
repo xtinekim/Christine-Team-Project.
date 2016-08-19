@@ -1,9 +1,10 @@
 <?php
 /**
- * The main template file.
- *
+ * The main template file for index.php
+ * The first page of WordPress
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
+ * Reference: Code Pen
  *
  * @package ckim-assignment1/Portfolio
  */
@@ -14,6 +15,8 @@ get_header(); ?>
    <div class="workplis">
 
 <figure class="snip1543 hover">
+
+<!--First Image-->
 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/huswife.jpg" alt="Banner" />
   <figcaption>
     <h3>352 HAPPY CLIENTS</h3>
@@ -22,6 +25,7 @@ get_header(); ?>
   <a href="#"></a>
 </figure>
 
+<!--Second Image-->
 <figure class="snip1543">
 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/happily.jpg" alt="Banner" />
   <figcaption>
@@ -38,13 +42,21 @@ get_header(); ?>
 <!--3D CSS Carousel- Reference Code Pen-->
 <div id="wrapper">
     <div id="image">
+    <!--Image 1-->
       <div class="image i1"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/cinematography.png"></div>
+    <!--Image 1-->
       <div class="image i2"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/photography.png"></div>
+    <!--Image 2-->
       <div class="image i3"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/event.png"></div>
+    <!--Image 3-->
       <div class="image i4"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/dj.png"></div>
+    <!--Image 4-->
       <div class="image i5"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/car.png"></div>
+    <!--Image 5-->
       <div class="image i6"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/travel.png"></div>
+    <!--Image 6-->
       <div class="image i7"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/florist.png"></div>
+    <!--Image 7-->
       <div class="image i8"><img src="http://phoenix.sheridanc.on.ca/~ccit3667/wp-content/uploads/2016/08/more.png"></div>
     </div>
   </div>
